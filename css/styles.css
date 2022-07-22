@@ -12,7 +12,7 @@
 @import "theme/aside.css";
 
 /* components files */
-@import "vendor/draggable.css";
+@import "utils/draggable.css";
 
 /* components files */
 @import "components/buttons.css";
