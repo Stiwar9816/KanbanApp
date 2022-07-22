@@ -47,11 +47,18 @@ const createTask = (task) => {
   taskDate.innerHTML = `<span class="card-task__date--tag-date">Plazo:</span> ${dateFormat(
     task.deadline
   )}`;
+
+  let taskCreate = document.createElement("p")
+  taskCreate.classList.add("card-task__date")
+  taskCreate.innerHTML = `<span class="card-task__date--tag-date">Creación:</span> ${dateFormat(
+    task.created
+  )}`;
   
   newTask.appendChild(taskTitle);
   newTask.appendChild(taskResponsible);
   newTask.appendChild(taskDetails);
   newTask.appendChild(taskDate);
+  newTask.appendChild(taskCreate)
 
   // Referenciamos por medio del ID las columnas
   let columnToDo = document.querySelector("#todoTasks");
