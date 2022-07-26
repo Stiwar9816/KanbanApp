@@ -25,14 +25,14 @@ const createTask = (task) => {
   // y le añadimos el title de nuestra API "task.title"
   taskTitle.innerText = task.title;
 
-  //creamos una etiqueta parrafo 
+  //creamos una etiqueta parrafo
   let taskResponsible = document.createElement("p");
   //le añadimos una clase card-task__responsible
   taskResponsible.classList.add("card_task__responsible");
   // le pasamos los datos del responsable de la tarea desde la API
   taskResponsible.innerHTML = `<span class="card_task__responsible--tag-creator">Responsable:</span> ${task.person}`;
 
-  // Creamos una etiqueta parrafo 
+  // Creamos una etiqueta parrafo
   let taskDetails = document.createElement("p");
   //le añadimos una clase card-task__details
   taskDetails.classList.add("card-task__details");
@@ -48,17 +48,17 @@ const createTask = (task) => {
     task.deadline
   )}`;
 
-  let taskCreate = document.createElement("p")
-  taskCreate.classList.add("card-task__date")
+  let taskCreate = document.createElement("p");
+  taskCreate.classList.add("card-task__date");
   taskCreate.innerHTML = `<span class="card-task__date--tag-date">Creación:</span> ${dateFormat(
     task.created
   )}`;
-  
+
   newTask.appendChild(taskTitle);
   newTask.appendChild(taskResponsible);
   newTask.appendChild(taskDetails);
   newTask.appendChild(taskDate);
-  newTask.appendChild(taskCreate)
+  newTask.appendChild(taskCreate);
 
   // Referenciamos por medio del ID las columnas
   let columnToDo = document.querySelector("#todoTasks");
